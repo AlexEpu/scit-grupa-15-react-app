@@ -9,6 +9,9 @@ export class Navigation extends React.Component {
   };
 
   handleButtonClick = (event) => {
+  
+  
+    this.setState({ currentSelectedButton: event.target.id });
     console.log(event.target);
   };
 
@@ -27,7 +30,7 @@ export class Navigation extends React.Component {
         />
         <NavButton
           label="Contact"
-          selected={this.state.currentSelectedButton === "Contact"}
+          selected={this.state.currentSelectedButton === "Contact"} 
           onClick={this.handleButtonClick}
         />
       </div>
